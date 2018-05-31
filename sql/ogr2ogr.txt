@@ -1,0 +1,63 @@
+--// Belmont
+ogr2ogr -f "ESRI Shapefile" belmont.shp PG:"host=13.82.41.95 user=postgres dbname=jcfcqrso password=18iaPR3EBwgY" "public.belmont"
+
+--// Foster City
+ogr2ogr -f "ESRI Shapefile" foster_city.shp PG:"host=13.82.41.95 user=postgres dbname=jcfcqrso password=18iaPR3EBwgY" "public.foster_city"
+
+--// Fremont
+ogr2ogr -f "ESRI Shapefile" fremont.shp PG:"host=13.82.41.95 user=postgres dbname=jcfcqrso password=18iaPR3EBwgY" "public.fremont"
+
+--// san carlos
+ogr2ogr -f "ESRI Shapefile" san_carlos.shp PG:"host=13.82.41.95 user=postgres dbname=jcfcqrso password=18iaPR3EBwgY" "public.san_carlos"
+
+--// San Mateo
+ogr2ogr -f "ESRI Shapefile" san_mateo.shp PG:"host=13.82.41.95 user=postgres dbname=jcfcqrso password=18iaPR3EBwgY" "public.san_mateo"
+
+Upload via qgis dbmanager
+run alter table statements  ..cities.sql
+
+cd to deliverables folder...
+ogr2ogr -f "ESRI Shapefile" fremont.shp PG:"host=13.82.41.95 user=postgres dbname=jcfcqrso password=18iaPR3EBwgY" "public.fremont"
+
+Open in ArcMap...
+Style
+Save as kml
+
+
+ogr2ogr -f "ESRI Shapefile" new_lines.shp PG:"host=13.82.41.95 user=postgres dbname=jcfcqrso password=18iaPR3EBwgY" "public.new_lines"
+
+
+
+Microsoft Windows [Version 10.0.16299.309]
+(c) 2017 Microsoft Corporation. All rights reserved.
+
+C:\Users\Noah>cd Desktop
+
+C:\Users\Noah\Desktop>pg_dump -h 13.82.41.95 -U postgres -t lines jcfcqrso > lines.sql
+
+C:\Users\Noah\Desktop>mkdir shp
+
+C:\Users\Noah\Desktop>cd shp
+
+C:\Users\Noah\Desktop\shp>ogr2ogr -f "ESRI Shapefile" new_lines.shp PG:"host=13.82.41.95 user=postgres dbname=jcfcqrso password=18iaPR3EBwgY" "public.new_lines"
+
+C:\Users\Noah\Desktop\shp>cd ..
+
+C:\Users\Noah\Desktop>cd grids
+
+C:\Users\Noah\Desktop\grids>cd sample
+
+C:\Users\Noah\Desktop\grids\sample>ogr2ogr -f "ESRI Shapefile" san_mateo_lines.shp PG:"host=13.82.41.95 user=postgres dbname=jcfcqrso password=18iaPR3EBwgY" "public.san_mateo_lines"
+
+C:\Users\Noah\Desktop\grids\sample>ogr2ogr -f "ESRI Shapefile" san_mateo_places.shp PG:"host=13.82.41.95 user=postgres dbname=jcfcqrso password=18iaPR3EBwgY" "public.san_mateo_places"
+
+C:\Users\Noah\Desktop\grids\sample>ogr2ogr -f "ESRI Shapefile" san_mateo_lines.shp PG:"host=13.82.41.95 user=postgres dbname=jcfcqrso password=18iaPR3EBwgY" "public.san_mateo_lines"
+ERROR 1: san_mateo_lines.shp is not a directory.
+
+ESRI Shapefile driver failed to create san_mateo_lines.shp
+
+C:\Users\Noah\Desktop\grids\sample>ogr2ogr -f "ESRI Shapefile" san_mateo_lines.shp PG:"host=13.82.41.95 user=postgres dbname=jcfcqrso password=18iaPR3EBwgY" "public.san_mateo_lines"
+
+C:\Users\Noah\Desktop\grids\sample>ogr2ogr -f "ESRI Shapefile" san_mateo_city_lines.shp PG:"host=13.82.41.95 user=postgres dbname=jcfcqrso password=18iaPR3EBwgY" "public.san_mateo_city_lines"
+
+C:\Users\Noah\Desktop\grids\sample>san_mateo_lines

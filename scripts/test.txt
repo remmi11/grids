@@ -1,0 +1,2 @@
+ogr2ogr -f "ESRI Shapefile" folders/San Bruno/San Bruno.shp PG:"host=localhost user=postgres dbname=jcfcqrso password=pass" -sql "SELECT gid AS id, name, geom FROM places WHERE name = 'San Bruno'"
+"SELECT sp_count, geom FROM grid50_rsa WHERE province = 'Gauteng'"
